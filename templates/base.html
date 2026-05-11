@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. CBS Humanitarian Community Development Foundation of Americas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">Dr. CBS Humanitarian Community<br>Development Foundation of Americas</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/programs">Programs</a>
+    <a href="/events">Events</a>
+    <a href="/donate" class="donate-nav">Donate</a>
+    <a href="/volunteer">Volunteer</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="page-wrap">
+  {% if page == 'home' %}
+    {% include 'home.html' %}
+  {% elif page == 'about' %}
+    {% include 'about.html' %}
+  {% elif page == 'programs' %}
+    {% include 'programs.html' %}
+  {% elif page == 'events' %}
+    {% include 'events.html' %}
+  {% elif page == 'donate' %}
+    {% include 'donate.html' %}
+  {% elif page == 'volunteer' %}
+    {% include 'volunteer.html' %}
+  {% elif page == 'contact' %}
+    {% include 'contact.html' %}
+  {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
