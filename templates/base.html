@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-logo">Dr. CBS Humanitarian Community<br>Development Foundation of Americas</div>
   <div class="nav-links">
@@ -23,7 +22,6 @@
   </div>
 </nav>
 
-<!-- PAGE CONTENT -->
 <div class="page-wrap">
   {% if page == 'home' %}
     {% include 'home.html' %}
@@ -33,6 +31,8 @@
     {% include 'programs.html' %}
   {% elif page == 'events' %}
     {% include 'events.html' %}
+  {% elif page == 'event_detail' %}
+    {% include 'event_detail.html' %}
   {% elif page == 'donate' %}
     {% include 'donate.html' %}
   {% elif page == 'volunteer' %}

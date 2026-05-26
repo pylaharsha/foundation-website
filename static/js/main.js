@@ -91,3 +91,14 @@ function handleCardDonate() {
   }
   alert('Thank you, ' + name.value.trim() + '! Your donation of $' + amt + ' is being processed.\n\nA receipt will be sent to ' + email.value.trim() + '.\n\n(Connect to Stripe or PayPal to go live.)');
 }
+// Events page — show/hide detail panel
+function showEventDetail(id) {
+  document.querySelectorAll('[id^="detail-"]').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('[id^="evt-"]').forEach(el => {
+    el.style.background = '';
+    el.style.borderLeft = '4px solid transparent';
+  });
+  document.getElementById('detail-' + id).style.display = 'block';
+  document.getElementById('evt-' + id).style.background = 'var(--cream-dark)';
+  document.getElementById('evt-' + id).style.borderLeft = '4px solid var(--gold)';
+}

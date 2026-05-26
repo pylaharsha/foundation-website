@@ -1,166 +1,186 @@
 <div class="events-hero">
-    <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;position:relative;">Dr. CBS Humanitarian Foundation</div>
-    <h1>Events</h1>
-    <p>Gatherings of wisdom, culture, and community across the Americas</p>
+  <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;position:relative;">Dr. CBS Humanitarian Foundation</div>
+  <h1>Events</h1>
+  <p>Gatherings of wisdom, culture, and community across the Americas</p>
+</div>
+
+<div style="padding:3rem 2rem 0;">
+  <div class="events-tabs">
+    <button class="ev-tab active" onclick="switchTab('upcoming')">Upcoming Events</button>
+    <button class="ev-tab" onclick="switchTab('past')">Past Events</button>
   </div>
+</div>
 
-  <div style="padding:3rem 2rem 0;">
-    <div class="events-tabs">
-      <button class="ev-tab active" onclick="switchTab('upcoming')">Upcoming Events</button>
-      <button class="ev-tab" onclick="switchTab('past')">Past Events</button>
-    </div>
-  </div>
+<!-- UPCOMING EVENTS -->
+<div id="tab-upcoming" class="events-section active">
+  <div class="events-body">
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:2rem;align-items:start;">
 
-  <!-- UPCOMING EVENTS -->
-  <div id="tab-upcoming" class="events-section active">
-    <div class="events-body">
-
-      <!-- GATEWAY OF GRACE — FEATURED -->
-      <div class="featured-event">
-        <div class="featured-badge">✦ Featured Event</div>
-
-        <!-- IMAGE SECTION — overlay contained here only -->
-        <div style="position:relative;height:320px;overflow:hidden;">
-          <img style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Gateway_Arch_St_Louis_Missouri.jpg/1280px-Gateway_Arch_St_Louis_Missouri.jpg"
-            alt="Gateway Arch St. Louis"
-            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/St._Louis_night_expblend_cropped.jpg/1280px-St._Louis_night_expblend_cropped.jpg'">
-          <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(26,49,120,0.2) 0%, rgba(26,49,120,0.85) 100%);"></div>
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem 2.5rem;">
-            <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(204,255,51,0.15);border:1px solid rgba(204,255,51,0.6);border-radius:20px;padding:0.4rem 1.1rem;margin-bottom:0.8rem;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#CCFF33;">✦ &nbsp; August 10–12, 2026 &nbsp;·&nbsp; St. Louis, USA</div>
-            <h2 style="font-family:'Cinzel',serif;color:#FFFFFF;font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 0.25rem;letter-spacing:0.03em;">Gateway of Grace</h2>
-            <div style="color:#FFD84A;font-size:1rem;font-style:italic;letter-spacing:0.06em;">Jai Shri Sai &nbsp;·&nbsp; Jai Shri Gurudev</div>
+      <!-- LEFT: Scrollable event list -->
+      <div style="background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;overflow:hidden;position:sticky;top:90px;">
+        <div style="padding:1rem 1.2rem;background:var(--deep);font-family:'Cinzel',serif;font-size:0.8rem;font-weight:600;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">Upcoming Events</div>
+        <div style="max-height:520px;overflow-y:auto;">
+          <div onclick="showEventDetail('gateway')" id="evt-gateway"
+            style="padding:1.2rem;border-bottom:1px solid var(--cream-dark);cursor:pointer;background:var(--cream-dark);border-left:4px solid var(--gold);">
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.3rem;">Aug 10–12, 2026</div>
+            <div style="font-family:'Cinzel',serif;font-size:0.92rem;color:var(--deep);margin-bottom:0.3rem;">Gateway of Grace</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">St. Louis, MO · Cross-Cultural Event</div>
           </div>
-        </div>
-
-        <!-- CONTENT SECTION — completely separate, no overlay interference -->
-        <div style="background:#1A3178;padding:2rem 2.5rem 2.5rem;">
-          <p style="color:rgba(225,240,255,0.95);font-size:0.95rem;line-height:1.85;max-width:700px;margin-bottom:0.8rem;">We cordially invite you and your family to a cross-cultural event to celebrate the values that unite us all — rooted in a real and inspiring modern-day master-disciple relationship. All communities and all backgrounds are welcome to indulge in a shared experience of hope, healing &amp; unity, and immerse ourselves in days of wisdom and togetherness.</p>
-          <p style="color:#FFD84A;font-style:italic;font-size:0.92rem;margin-bottom:1.8rem;">This cross-cultural event will be graced by the divine presence of Guruji <strong style="color:#FFFFFF;">Dr. Chandra Bhanu Satpathy</strong></p>
-
-          <!-- META GRID -->
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:2rem;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.25);">
-            <div style="padding:1rem 1.3rem;border-right:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">Dates</div>
-              <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;">August 10 – 12, 2026</div>
-            </div>
-            <div style="padding:1rem 1.3rem;border-right:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">Venue</div>
-              <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;">The Purser, Logan University<br>1851 Schoettler Rd, Chesterfield, MO 63017</div>
-            </div>
-            <div style="padding:1rem 1.3rem;border-right:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">Recommended Stay</div>
-              <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;">DoubleTree by Hilton<br>Chesterfield, MO 63017</div>
-            </div>
-            <div style="padding:1rem 1.3rem;">
-              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">RSVP Contact</div>
-              <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;"><a href="mailto:GatewayOfGraceSTL@gmail.com" style="color:#FFD84A;text-decoration:none;">GatewayOfGraceSTL@gmail.com</a><br>+1 (937) 830-3739</div>
-            </div>
-          </div>
-
-          <!-- AGENDA -->
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.9rem;">Agenda Highlights</div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem;">
-            <div style="background:#FFFFFF;border-left:5px solid #CCFF33;border-radius:0 8px 8px 0;padding:1.2rem 1.3rem;">
-              <div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1A3178;margin-bottom:0.45rem;">Aug 11 · 10:00 AM Onwards</div>
-              <div style="font-family:'Cinzel',serif;color:#0C1E5B;font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;">Foundation Inauguration</div>
-              <div style="font-size:0.82rem;color:#344070;line-height:1.6;">Official launch of the Foundation — a landmark milestone for our community.</div>
-            </div>
-            <div style="background:#FFFFFF;border-left:5px solid #CCFF33;border-radius:0 8px 8px 0;padding:1.2rem 1.3rem;">
-              <div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1A3178;margin-bottom:0.45rem;">Aug 11 · 5:00 PM Onwards</div>
-              <div style="font-family:'Cinzel',serif;color:#0C1E5B;font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;">'Sai: As He Was'</div>
-              <div style="font-size:0.82rem;color:#344070;line-height:1.6;">Broadway Style Musical Theater — Choreography &amp; Direction by Guru Sanchita Bhattacharya</div>
-            </div>
-            <div style="background:#FFFFFF;border-left:5px solid #CCFF33;border-radius:0 8px 8px 0;padding:1.2rem 1.3rem;">
-              <div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1A3178;margin-bottom:0.45rem;">Aug 12 · 10:00 AM Onwards</div>
-              <div style="font-family:'Cinzel',serif;color:#0C1E5B;font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;">Local Temple Visit</div>
-              <div style="font-size:0.82rem;color:#344070;line-height:1.6;">A spiritual gathering and community visit to a local temple in St. Louis.</div>
-            </div>
-          </div>
-
-          <!-- ACTIONS -->
-          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-            <a href="mailto:GatewayOfGraceSTL@gmail.com" style="background:#CCFF33;color:#0C1E5B;font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;">RSVP for the Event →</a>
-            <a href="tel:+19378303739" style="background:transparent;color:rgba(220,235,255,0.9);font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.35);">Call: +1 937 830 3739</a>
-            <a href="#" href="/donate" style="background:transparent;color:rgba(220,235,255,0.9);font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.35);">Support This Event</a>
+          <div style="padding:1.2rem;">
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">Coming Soon</div>
+            <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--text-muted);">More events to be announced</div>
           </div>
         </div>
       </div>
 
-      <!-- CBS PORTRAIT ON EVENTS PAGE -->
-      <div style="background:#1A3178;border-radius:10px;padding:2rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap;margin-bottom:3rem;border:1px solid rgba(160,190,255,0.3);">
-        <img src="https://static.wixstatic.com/media/31892e_0eda59e019b64ad6b56b8e0310d0866a~mv2.png/v1/fill/w_300,h_400,al_c,q_85,enc_avif,quality_auto/home.png"
-          alt="Dr. Chandra Bhanu Satpathy"
-          style="width:130px;height:170px;border-radius:8px;object-fit:cover;object-position:top;border:2px solid #CCFF33;flex-shrink:0;">
-        <div>
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.4rem;">Graced by the Presence of</div>
-          <h3 style="font-family:'Cinzel',serif;font-size:1.2rem;color:#FFFFFF;margin-bottom:0.6rem;">Guruji Dr. Chandra Bhanu Satpathy</h3>
-          <p style="font-size:0.9rem;color:rgba(225,235,255,0.95);line-height:1.8;max-width:560px;margin:0;">A noted scholar, spiritual thinker, author, and humanitarian — his presence at Gateway of Grace will bring divine wisdom and inspiration to all who attend. He has guided millions across 200+ centers worldwide through the teachings of Shirdi Sai and Indian philosophy.</p>
+      <!-- RIGHT: Event detail pane -->
+      <div id="event-detail-pane">
+        <div id="detail-gateway">
+          <div class="featured-event">
+            <div class="featured-badge">✦ Featured Event</div>
+        
+            <!-- LOGO at top of banner -->
+            <div style="background:#1A3178;padding:1.8rem 2.5rem 0;display:flex;justify-content:center;">
+              <img src="/static/images/logo_grace_event.png"
+                alt="Gateway of Grace Logo"
+                style="width:130px;height:130px;object-fit:contain;border-radius:50%;border:3px solid rgba(204,255,51,0.6);background:#FFFFFF;box-shadow:0 8px 24px rgba(0,0,0,0.3);">
+            </div>
+            <div style="position:relative;height:320px;overflow:hidden;">
+              <img style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Gateway_Arch_St_Louis_Missouri.jpg/1280px-Gateway_Arch_St_Louis_Missouri.jpg"
+                alt="Gateway Arch St. Louis"
+                onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/St._Louis_night_expblend_cropped.jpg/1280px-St._Louis_night_expblend_cropped.jpg'">
+              <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,49,120,0.2) 0%,rgba(26,49,120,0.85) 100%);"></div>
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:2rem 2.5rem;">
+                <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(204,255,51,0.15);border:1px solid rgba(204,255,51,0.6);border-radius:20px;padding:0.4rem 1.1rem;margin-bottom:0.8rem;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#CCFF33;">✦ &nbsp; August 10–12, 2026 &nbsp;·&nbsp; St. Louis, USA</div>
+                <h2 style="font-family:'Cinzel',serif;color:#FFFFFF;font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 0.25rem;letter-spacing:0.03em;">Gateway of Grace</h2>
+                <div style="color:#FFD84A;font-size:1rem;font-style:italic;letter-spacing:0.06em;">Jai Shri Sai &nbsp;·&nbsp; Jai Shri Gurudev</div>
+              </div>
+            </div>
+            <div style="background:#1A3178;padding:2rem 2.5rem 2.5rem;">
+              <p style="color:rgba(225,240,255,0.95);font-size:0.95rem;line-height:1.85;max-width:700px;margin-bottom:0.8rem;">We cordially invite you and your family to a cross-cultural event to celebrate the values that unite us all — rooted in a real and inspiring modern-day master-disciple relationship. All communities and all backgrounds are welcome.</p>
+              <p style="color:#FFD84A;font-style:italic;font-size:0.92rem;margin-bottom:1.8rem;">Graced by the divine presence of Guruji <strong style="color:#FFFFFF;">Dr. Chandra Bhanu Satpathy</strong></p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:2rem;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.25);">
+                <div style="padding:1rem 1.3rem;border-right:1px solid rgba(255,255,255,0.15);">
+                  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">Dates</div>
+                  <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;">August 10 – 12, 2026</div>
+                </div>
+                <div style="padding:1rem 1.3rem;border-right:1px solid rgba(255,255,255,0.15);">
+                  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">Venue</div>
+                  <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;">The Purser, Logan University<br>1851 Schoettler Rd, Chesterfield, MO 63017</div>
+                </div>
+                <div style="padding:1rem 1.3rem;border-right:1px solid rgba(255,255,255,0.15);">
+                  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">Recommended Stay</div>
+                  <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;">DoubleTree by Hilton<br>Chesterfield, MO 63017</div>
+                </div>
+                <div style="padding:1rem 1.3rem;">
+                  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.35rem;">RSVP Contact</div>
+                  <div style="font-size:0.9rem;color:#FFFFFF;line-height:1.5;"><a href="mailto:GatewayOfGraceSTL@gmail.com" style="color:#FFD84A;text-decoration:none;">GatewayOfGraceSTL@gmail.com</a><br>+1 (937) 830-3739</div>
+                </div>
+              </div>
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#CCFF33;margin-bottom:0.9rem;">Agenda Highlights</div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem;">
+                <div style="background:#FFFFFF;border-left:5px solid #CCFF33;border-radius:0 8px 8px 0;padding:1.2rem 1.3rem;">
+                  <div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1A3178;margin-bottom:0.45rem;">Aug 11 · 10:00 AM Onwards</div>
+                  <div style="font-family:'Cinzel',serif;color:#0C1E5B;font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;">Foundation Inauguration</div>
+                  <div style="font-size:0.82rem;color:#344070;line-height:1.6;">Official launch of the Foundation — a landmark milestone for our community.</div>
+                </div>
+                <div style="background:#FFFFFF;border-left:5px solid #CCFF33;border-radius:0 8px 8px 0;padding:1.2rem 1.3rem;">
+                  <div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1A3178;margin-bottom:0.45rem;">Aug 11 · 5:00 PM Onwards</div>
+                  <div style="font-family:'Cinzel',serif;color:#0C1E5B;font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;">'Sai: As He Was'</div>
+                  <div style="font-size:0.82rem;color:#344070;line-height:1.6;">Broadway Style Musical Theater — Choreography &amp; Direction by Guru Sanchita Bhattacharya</div>
+                </div>
+                <div style="background:#FFFFFF;border-left:5px solid #CCFF33;border-radius:0 8px 8px 0;padding:1.2rem 1.3rem;">
+                  <div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1A3178;margin-bottom:0.45rem;">Aug 12 · 10:00 AM Onwards</div>
+                  <div style="font-family:'Cinzel',serif;color:#0C1E5B;font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;">Local Temple Visit</div>
+                  <div style="font-size:0.82rem;color:#344070;line-height:1.6;">A spiritual gathering and community visit to a local temple in St. Louis.</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                <a href="mailto:GatewayOfGraceSTL@gmail.com" style="background:#CCFF33;color:#0C1E5B;font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;">RSVP for the Event →</a>
+                <a href="tel:+19378303739" style="background:transparent;color:rgba(220,235,255,0.9);font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.35);">Call: +1 937 830 3739</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAST EVENTS -->
+<div id="tab-past" class="events-section">
+  <div class="events-body">
+    <div class="past-events-grid">
+
+      <div class="past-card" onclick="window.location.href='/event/kids-market'" style="cursor:pointer;">
+        <img class="past-card-img" src="/static/images/kids_market_1.png" alt="Kids Market at St Charles">
+        <div class="past-card-body">
+          <div class="past-year">May 3, 2026 · Community Initiative</div>
+          <h3>Kids Market at St. Charles</h3>
+          <p>Youth volunteers ran a business stall at the St. Charles market — learning setup, customer service, sales, and POS management end-to-end.</p>
+        </div>
+      </div>
+
+      <div class="past-card" onclick="window.location.href='/event/book-drive'" style="cursor:pointer;">
+        <img class="past-card-img" src="/static/images/book_drive_cover.png" alt="Book Drive with Ready Readers">
+        <div class="past-card-body">
+          <div class="past-year">April 19, 2026 · Educational Initiative</div>
+          <h3>Book Drive with Ready Readers</h3>
+          <p>Youth volunteers collected ~400 books for the "Ready Readers" organization, supporting families in need across the community.</p>
+          <div style="margin-top:0.6rem;font-size:0.75rem;font-weight:700;color:var(--gold-dark);letter-spacing:0.06em;">VIEW PHOTOS →</div>
+        </div>
+      </div>
+
+      <div class="past-card" onclick="window.location.href='/event/palki-interfaith'" style="cursor:pointer;">
+        <img class="past-card-img" src="/static/images/palki_interfaith_1.png" alt="Palki Gathering">
+        <div class="past-card-body">
+          <div class="past-year">Mar 21, 2026 · Community Gathering</div>
+          <h3>Palki Gathering with Interfaith Team</h3>
+          <p>Community members gathered for a special Palki evening with discussion of Guru Bhagwat's Volume 1 key messages.</p>
+        </div>
+      </div>
+
+      <div class="past-card" onclick="window.location.href='/event/blessings-box'" style="cursor:pointer;">
+        <img class="past-card-img" src="/static/images/blessings_box_1.png" alt="Blessings in a Box">
+        <div class="past-card-body">
+          <div class="past-year">Mar 8, 2026 · Community Service</div>
+          <h3>Blessings in a Box</h3>
+          <p>A heartwarming drive led by young volunteers and families — an act of kindness that touched many lives, complete with live music.</p>
+        </div>
+      </div>
+
+      <div class="past-card" onclick="window.location.href='/event/food-drive'" style="cursor:pointer;">
+        <img class="past-card-img" src="/static/images/food_drive_1.png" alt="Food Drive for Homeless Shelter">
+        <div class="past-card-body">
+          <div class="past-year">Dec 30, 2025 · Humanitarian Initiative</div>
+          <h3>Food Drive for Homeless Shelter</h3>
+          <p>Volunteers collected and distributed food to those in need at local homeless shelters during the holiday season.</p>
         </div>
       </div>
 
     </div>
   </div>
+</div>
 
-  <!-- PAST EVENTS -->
-  <div id="tab-past" class="events-section">
-    <div class="events-body">
-      <div class="past-events-grid">
-        <div class="past-card">
-          <img class="past-card-img"
-            src="https://static.wixstatic.com/media/31892e_dc84217c5178406ca1a447bcba8d0430~mv2_d_5120_3657_s_4_2.jpg/v1/fill/w_700,h_450,fp_0.50_0.50,q_85/31892e_dc84217c5178406ca1a447bcba8d0430~mv2_d_5120_3657_s_4_2.jpg"
-            alt="Community event">
-          <div class="past-card-body">
-            <div class="past-year">Cultural Program</div>
-            <h3>Guru Bhagwat Parayan</h3>
-            <p>A devotional gathering bringing together the community for sacred readings and spiritual teachings by Dr. CBS Satpathy.</p>
-          </div>
-        </div>
-        <div class="past-card">
-          <img class="past-card-img"
-            src="https://static.wixstatic.com/media/31892e_a4074ea5a70a482482f564dabb6cd64c~mv2_d_2256_1496_s_2.jpg/v1/fill/w_700,h_450,fp_0.50_0.50,q_85/31892e_a4074ea5a70a482482f564dabb6cd64c~mv2_d_2256_1496_s_2.jpg"
-            alt="Education event">
-          <div class="past-card-body">
-            <div class="past-year">Educational Initiative</div>
-            <h3>Youth Book Drive &amp; Distribution</h3>
-            <p>Kids and youth came together to collect, curate, and distribute books to learners in need through schools and community centers.</p>
-          </div>
-        </div>
-        <div class="past-card">
-          <img class="past-card-img"
-            src="https://static.wixstatic.com/media/31892e_3d6cff0412a04e16852a0956f83d7c93~mv2_d_2400_1589_s_2.jpg/v1/fill/w_700,h_450,fp_0.50_0.50,q_85/31892e_3d6cff0412a04e16852a0956f83d7c93~mv2_d_2400_1589_s_2.jpg"
-            alt="Book fair">
-          <div class="past-card-body">
-            <div class="past-year">Literary Outreach</div>
-            <h3>Sai Book Fair &amp; Cultural Exhibition</h3>
-            <p>A celebration of literature and cultural heritage featuring books, music, and art from Dr. CBS Satpathy's extensive collection.</p>
-          </div>
-        </div>
-        <div class="past-card">
-          <img class="past-card-img"
-            src="https://static.wixstatic.com/media/31892e_e1088b1da8c74a869a9c77cba9659fdf~mv2.jpg/v1/fill/w_700,h_450,fp_0.50_0.50,q_85/31892e_e1088b1da8c74a869a9c77cba9659fdf~mv2.jpg"
-            alt="Sai Ki Palki">
-          <div class="past-card-body">
-            <div class="past-year">Spiritual Celebration</div>
-            <h3>Sai Ki Palki — Community Festival</h3>
-            <p>A joyful and sacred procession honoring Shirdi Sai Baba, bringing together devotees across the Americas in celebration and prayer.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:3rem;padding:2rem;background:var(--cream-dark);border-radius:8px;">
-        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1rem;">Want to see more events and highlights? Visit Dr. CBS Satpathy's official website.</p>
-        <a href="https://www.cbsatpathy.com/specialevents" target="_blank" class="btn-outline" style="display:inline-block;">View All Past Events →</a>
-      </div>
-    </div>
+<footer>
+  <div class="footer-logo">Dr. Chandra Bhanu Satpathy Humanitarian Community Development Foundation of Americas</div>
+  <div class="footer-details">
+    <span>Registered <strong>501(c)(3)</strong></span>
+    <span>EIN: <strong>N001698377</strong></span>
+    <span>Name: <strong>DrCBSHCDFofA</strong></span>
   </div>
+  <p class="footer-copy">© 2026 Dr. Chandra Bhanu Satpathy Humanitarian Community Development Foundation of Americas. All rights reserved.</p>
+</footer>
 
-  <footer>
-    <div class="footer-logo">Dr. CBS Humanitarian Community Development Foundation of Americas</div>
-    <div class="footer-details">
-      <span>Registered <strong>501(c)(3)</strong></span>
-      <span>EIN: <strong>N001698377</strong></span>
-      <span>Name: <strong>DrCBSHCDFofA</strong></span>
-    </div>
-    <p class="footer-copy">© 2026 Dr. CBS Humanitarian Community Development Foundation of Americas. All rights reserved.</p>
-  </footer>
+<script>
+function showEventDetail(id) {
+  document.querySelectorAll('[id^="detail-"]').forEach(el => el.style.display='none');
+  document.querySelectorAll('[id^="evt-"]').forEach(el => {
+    el.style.background=''; el.style.borderLeft='4px solid transparent';
+  });
+  document.getElementById('detail-'+id).style.display='block';
+  document.getElementById('evt-'+id).style.background='var(--cream-dark)';
+  document.getElementById('evt-'+id).style.borderLeft='4px solid var(--gold)';
+}
+</script>

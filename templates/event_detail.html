@@ -1,0 +1,59 @@
+<!-- Back button -->
+<div style="background:var(--deep);padding:calc(var(--nav-h) + 1.5rem) 2rem 1.5rem;">
+    <div style="max-width:960px;margin:0 auto;">
+      <a href="/events" style="color:var(--gold);text-decoration:none;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">← Back to Events</a>
+    </div>
+  </div>
+  
+  <!-- Event Hero -->
+  <div style="background:var(--deep);padding:1rem 2rem 3rem;">
+    <div style="max-width:960px;margin:0 auto;">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">{{ event.category }}</div>
+      <h1 style="font-family:'Cinzel',serif;color:var(--white);font-size:clamp(1.5rem,3vw,2.4rem);margin-bottom:0.5rem;">{{ event.title }}</h1>
+      <p style="color:var(--gold-light);font-size:0.95rem;">{{ event.date }}</p>
+    </div>
+  </div>
+  
+  <!-- Cover image -->
+  <div style="max-width:960px;margin:0 auto;padding:2rem 2rem 0;">
+    <img src="{{ event.cover_image }}" alt="{{ event.title }}"
+      style="width:100%;height:400px;object-fit:cover;border-radius:10px;border:2px solid var(--cream-dark);">
+  </div>
+  
+  <!-- Description -->
+  <div style="max-width:960px;margin:0 auto;padding:2rem;">
+    <p style="font-size:1rem;color:var(--text-muted);line-height:1.9;max-width:720px;">{{ event.description }}</p>
+  
+    {% if event.link %}
+    <div style="margin-top:1.5rem;">
+      <a href="{{ event.link }}" target="_blank" class="btn-outline" style="display:inline-block;">{{ event.link_text }} →</a>
+    </div>
+    {% endif %}
+  </div>
+  
+  <!-- Gallery -->
+  {% if event.gallery %}
+  <div style="max-width:960px;margin:0 auto;padding:0 2rem 4rem;">
+    <div style="font-family:'Cinzel',serif;font-size:1.1rem;color:var(--deep);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gold);">Photo Gallery</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;">
+      {% for img in event.gallery %}
+      <div style="border-radius:8px;overflow:hidden;border:1px solid var(--cream-dark);">
+        <img src="{{ img }}" alt="Event photo"
+          style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.3s;"
+          onmouseover="this.style.transform='scale(1.03)'"
+          onmouseout="this.style.transform='scale(1)'">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  <footer>
+    <div class="footer-logo">Dr. Chandra Bhanu Satpathy Humanitarian Community Development Foundation of Americas</div>
+    <div class="footer-details">
+      <span>Registered <strong>501(c)(3)</strong></span>
+      <span>EIN: <strong>N001698377</strong></span>
+      <span>Name: <strong>DrCBSHCDFofA</strong></span>
+    </div>
+    <p class="footer-copy">© 2026 Dr. Chandra Bhanu Satpathy Humanitarian Community Development Foundation of Americas. All rights reserved.</p>
+  </footer>

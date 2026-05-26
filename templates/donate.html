@@ -1,101 +1,98 @@
 <div class="donate-hero">
-    <h1>Support Our Mission</h1>
-    <p>Your generosity uplifts lives across the Americas</p>
+  <h1>Support Our Mission</h1>
+  <p>Your generosity uplifts lives across the Americas</p>
+</div>
+
+<div class="donate-body">
+  <div class="tax-badge">
+    <div class="badge-icon">🏛️</div>
+    <div>
+      <h4>Your Contribution is Tax-Deductible</h4>
+      <p>We are a registered 501(c)(3) nonprofit organization. All contributions are fully tax-deductible to the extent permitted by law. &nbsp;EIN: N001698377 &nbsp;|&nbsp; DrCBSHCDFofA</p>
+    </div>
   </div>
 
-  <div class="donate-body">
-    <div class="tax-badge">
-      <div class="badge-icon">🏛️</div>
-      <div>
-        <h4>Your Donation is Tax-Deductible</h4>
-        <p>We are a registered 501(c)(3) nonprofit organization. All contributions are fully tax-deductible to the extent permitted by law. &nbsp;EIN: N001698377 &nbsp;|&nbsp; DrCBSHCDFofA</p>
-      </div>
-    </div>
-
-    <p style="font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.8rem;">Select an Amount</p>
-    <div class="donate-amounts">
-      <div class="amt-btn" onclick="selectAmt(this, '25')">$25</div>
-      <div class="amt-btn selected" onclick="selectAmt(this, '50')">$50</div>
-      <div class="amt-btn" onclick="selectAmt(this, '100')">$100</div>
-      <div class="amt-btn" onclick="selectAmt(this, '250')">$250</div>
-      <div class="amt-btn" onclick="selectAmt(this, '500')">$500</div>
-      <div class="amt-btn" onclick="selectAmt(this, 'custom')">Custom</div>
-    </div>
-
-    <div class="donate-form-group" id="custom-amount-row" style="display:none;">
-      <label>Enter Custom Amount (USD)</label>
-      <input type="number" id="donate-amount-input" min="1" placeholder="e.g. 75">
-    </div>
-
-    <div style="margin:1.5rem 0 0.5rem;">
-      <p style="font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Pay Securely Via</p>
-
-      <!-- PayPal Donate Button (standard hosted button — replace YOUR_PAYPAL_EMAIL with actual email) -->
-      <div id="paypal-btn-container" style="margin-bottom:1.2rem;">
-        <form action="https://www.paypal.com/donate" method="post" target="_blank" id="paypal-form">
-          <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@EMAIL.COM">
-          <input type="hidden" name="no_recurring" value="0">
-          <input type="hidden" name="item_name" value="Donation to Dr. CBS Humanitarian Community Development Foundation of Americas">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="hidden" name="amount" id="paypal-amount" value="50">
-          <button type="submit" class="paypal-donate-btn" onclick="syncPayPalAmount()">
-            <svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .92-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.773-4.47z" fill="white"/>
-            </svg>
-            Donate with PayPal
-          </button>
-        </form>
-      </div>
-
-      <!-- Divider -->
-      <div style="display:flex;align-items:center;gap:1rem;margin:1.2rem 0;">
-        <div style="flex:1;height:1px;background:var(--cream-dark);"></div>
-        <span style="font-size:0.78rem;color:var(--text-muted);font-weight:700;letter-spacing:0.06em;">OR PAY BY CARD</span>
-        <div style="flex:1;height:1px;background:var(--cream-dark);"></div>
-      </div>
-
-      <!-- Card / Direct option -->
-      <div class="donate-form-group">
-        <label>Full Name</label>
-        <input type="text" id="card-name" placeholder="As it appears on your card">
-      </div>
-      <div class="donate-form-group">
-        <label>Email Address</label>
-        <input type="email" id="card-email" placeholder="For your donation receipt">
-      </div>
-      <div class="donate-form-group">
-        <label>Card Number</label>
-        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)">
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-        <div class="donate-form-group">
-          <label>Expiry</label>
-          <input type="text" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)">
-        </div>
-        <div class="donate-form-group">
-          <label>CVV</label>
-          <input type="text" placeholder="123" maxlength="4">
-        </div>
-      </div>
-
-      <button class="btn-primary" style="width:100%;font-size:1rem;padding:1.1rem;margin-top:0.5rem;" onclick="handleCardDonate()">
-        🔒 &nbsp; Donate Securely — <span id="donate-display-amt">$50</span>
-      </button>
-    </div>
-
-    <p class="donate-notice">
-      🔒 256-bit SSL encrypted. Your payment details are never stored on our servers.<br>
-      A donation receipt will be sent to your email for tax records.<br>
-      For donations by check, please make payable to <strong>DrCBSHCDFofA</strong> and contact us for mailing address.
-    </p>
+  <p style="font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.8rem;">Select an Amount</p>
+  <div class="donate-amounts">
+    <div class="amt-btn selected" onclick="selectAmt(this, '50')">$50</div>
+    <div class="amt-btn" onclick="selectAmt(this, '100')">$100</div>
+    <div class="amt-btn" onclick="selectAmt(this, '250')">$250</div>
+    <div class="amt-btn" onclick="selectAmt(this, '500')">$500</div>
+    <div class="amt-btn" onclick="selectAmt(this, '1000')">$1,000</div>
+    <div class="amt-btn" onclick="selectAmt(this, 'custom')">Custom</div>
   </div>
 
-  <footer>
-    <div class="footer-logo">Dr. CBS Humanitarian Community Development Foundation of Americas</div>
-    <div class="footer-details">
-      <span>Registered <strong>501(c)(3)</strong></span>
-      <span>EIN: <strong>N001698377</strong></span>
-      <span>Name: <strong>DrCBSHCDFofA</strong></span>
+  <div class="donate-form-group" id="custom-amount-row" style="display:none;">
+    <label>Enter Custom Amount (USD)</label>
+    <input type="number" id="donate-amount-input" min="1" placeholder="e.g. 75">
+  </div>
+
+  <div style="margin:1.5rem 0 0.5rem;">
+    <p style="font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Pay Securely Via</p>
+
+    <div id="paypal-btn-container" style="margin-bottom:1.2rem;">
+      <form action="https://www.paypal.com/donate" method="post" target="_blank" id="paypal-form">
+        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@EMAIL.COM">
+        <input type="hidden" name="no_recurring" value="0">
+        <input type="hidden" name="item_name" value="Contribution to Dr. CBS Humanitarian Community Development Foundation of Americas">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="amount" id="paypal-amount" value="50">
+        <button type="submit" class="paypal-donate-btn" onclick="syncPayPalAmount()">
+          <svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .92-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.773-4.47z" fill="white"/>
+          </svg>
+          Contribute with PayPal
+        </button>
+      </form>
     </div>
-    <p class="footer-copy">© 2026 Dr. CBS Humanitarian Community Development Foundation of Americas. All rights reserved.</p>
-  </footer>
+
+    <div style="display:flex;align-items:center;gap:1rem;margin:1.2rem 0;">
+      <div style="flex:1;height:1px;background:var(--cream-dark);"></div>
+      <span style="font-size:0.78rem;color:var(--text-muted);font-weight:700;letter-spacing:0.06em;">OR PAY BY CARD</span>
+      <div style="flex:1;height:1px;background:var(--cream-dark);"></div>
+    </div>
+
+    <div class="donate-form-group">
+      <label>Full Name</label>
+      <input type="text" id="card-name" placeholder="As it appears on your card">
+    </div>
+    <div class="donate-form-group">
+      <label>Email Address</label>
+      <input type="email" id="card-email" placeholder="For your receipt">
+    </div>
+    <div class="donate-form-group">
+      <label>Card Number</label>
+      <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)">
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div class="donate-form-group">
+        <label>Expiry</label>
+        <input type="text" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)">
+      </div>
+      <div class="donate-form-group">
+        <label>CVV</label>
+        <input type="text" placeholder="123" maxlength="4">
+      </div>
+    </div>
+
+    <button class="btn-primary" style="width:100%;font-size:1rem;padding:1.1rem;margin-top:0.5rem;" onclick="handleCardDonate()">
+      🔒 &nbsp; Contribute Securely — <span id="donate-display-amt">$50</span>
+    </button>
+  </div>
+
+  <p class="donate-notice">
+    🔒 256-bit SSL encrypted. Your payment details are never stored on our servers.<br>
+    A receipt will be sent to your email for tax records.<br>
+    For contributions by check, please make payable to <strong>DrCBSHCDFofA</strong> and contact us for mailing address.
+  </p>
+</div>
+
+<footer>
+  <div class="footer-logo">Dr. Chandra Bhanu Satpathy Humanitarian Community Development Foundation of Americas</div>
+  <div class="footer-details">
+    <span>Registered <strong>501(c)(3)</strong></span>
+    <span>EIN: <strong>N001698377</strong></span>
+    <span>Name: <strong>DrCBSHCDFofA</strong></span>
+  </div>
+  <p class="footer-copy">© 2026 Dr. Chandra Bhanu Satpathy Humanitarian Community Development Foundation of Americas. All rights reserved.</p>
+</footer>
