@@ -48,9 +48,10 @@
   }
   .nav-links a:hover { background: var(--gold); color: var(--deep); }
   .nav-links a.donate-nav {
-    background: var(--orange);
-    color: var(--white);
+    background: transparent;
+    color: var(--cream-dark);
     border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.45);
   }
   .nav-links a.donate-nav:hover { background: var(--gold); color: var(--deep); }
 
@@ -376,9 +377,10 @@
 
   /* ===== DONATE ===== */
   .donate-hero {
-    background: var(--orange);
-    padding: 4rem 2rem 3rem;
+    background: var(--deep);
+    padding: calc(var(--nav-h) + 3rem) 2rem 3rem;
     text-align: center;
+    border-bottom: 2px solid var(--gold-dark);
   }
   .donate-hero h1 {
     font-family: 'Cinzel', serif;
@@ -386,7 +388,7 @@
     font-size: clamp(1.5rem, 3vw, 2.4rem);
     margin-bottom: 0.5rem;
   }
-  .donate-hero p { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+  .donate-hero p { color: var(--gold); font-size: 0.95rem; }
   .donate-body {
     max-width: 640px;
     margin: 0 auto;
